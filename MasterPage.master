@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" %>
+
+<%@ Register src="Header.ascx" tagname="Header" tagprefix="uc1" %>
+<%@ Register src="UserControls/DepartmentsList.ascx" tagname="DepartmentsList" tagprefix="uc2" %>
+
+
+<!DOCTYPE html>
+
+<script runat="server">
+
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>BallShop</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+         <table cellspacing="0" cellpadding="0" width="770" border="0">
+             <tr> 
+                 <td width="220" valign="top">
+                     <uc2:DepartmentsList ID="DepartmentsList1" runat="server" />
+                      <br />
+                     List of Categories
+                      <br />
+                     </td>
+                 <td valign="top">
+                     <uc1:Header ID="Header1" runat="server" />
+&nbsp;<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                     </td>
+                 </tr>
+             </table>
+    </form>
+</body>
+</html>
