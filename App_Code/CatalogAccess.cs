@@ -125,8 +125,7 @@ public class CatalogAccess
             details.Thumbnail = dr["Thumbnail"].ToString();
             details.Image = dr["Image"].ToString();
             details.PromoFront = bool.Parse(dr["PromoFront"].ToString());
-            details.PromoDept =
-            bool.Parse(dr["PromoDept"].ToString());
+            details.PromoDept =bool.Parse(dr["PromoDept"].ToString());
         }
         // return department details
         return details;
@@ -231,7 +230,7 @@ howManyPages)
         DataTable table = GenericDataAccess.ExecuteSelectCommand(comm);
         // calculate how many pages of products and set the out parameter
         int howManyProducts = Int32.Parse(comm.Parameters["@HowManyProducts"].Value.ToString());
-        howManyPages = (int)Math.Ceiling((double)howManyProducts /(double)BallShopConfiguration.ProductsPerPage);
+        howManyPages = (int)Math.Ceiling((double)howManyProducts / (double)BallShopConfiguration.ProductsPerPage);
         // return the page of products
         return table;
     }

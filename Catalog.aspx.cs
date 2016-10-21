@@ -21,22 +21,18 @@ public partial class Catalog : System.Web.UI.Page
         {      // Retrieve category and department details and display them
             CategoryDetails cd = CatalogAccess.GetCategoryDetails(categoryId);
             catalogTitleLabel.Text = HttpUtility.HtmlEncode(cd.Name);
-            DepartmentDetails dd =
-          CatalogAccess.GetDepartmentDetails(departmentId);
+            DepartmentDetails dd = CatalogAccess.GetDepartmentDetails(departmentId);
             catalogDescriptionLabel.Text = HttpUtility.HtmlEncode(cd.Description);
             // Set the title of the page  
-            this.Title = HttpUtility.HtmlEncode(BallShopConfiguration.SiteName +
-                          ": " + dd.Name + ": " + cd.Name);
+            this.Title = HttpUtility.HtmlEncode(BallShopConfiguration.SiteName + ": " + dd.Name + ": " + cd.Name);
         }    // If browsing a department...   
         else if (departmentId != null)
         {      // Retrieve department details and display them  
             DepartmentDetails dd = CatalogAccess.GetDepartmentDetails(departmentId);
             catalogTitleLabel.Text = HttpUtility.HtmlEncode(dd.Name);
-            catalogDescriptionLabel.Text =
-       HttpUtility.HtmlEncode(dd.Description);
+            catalogDescriptionLabel.Text = HttpUtility.HtmlEncode(dd.Description);
             // Set the title of the page    
-            this.Title = HttpUtility.HtmlEncode(BallShopConfiguration.SiteName +
-          ": " + dd.Name);
+            this.Title = HttpUtility.HtmlEncode(BallShopConfiguration.SiteName + ": " + dd.Name);
         }
     }
 }
