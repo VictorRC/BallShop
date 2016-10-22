@@ -16,8 +16,7 @@ Text="Label"></asp:Label>
 </p>
 <p>
 <b>Price:</b>
-<asp:Label CssClass="ProductPrice" ID="priceLabel" runat="server"
-Text="Label"></asp:Label>
+<asp:Label CssClass="ProductPrice" ID="priceLabel" runat="server" Text="Label"></asp:Label>
 </p>
     </div>
 </asp:Content>

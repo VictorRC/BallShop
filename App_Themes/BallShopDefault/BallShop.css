@@ -50,14 +50,14 @@ a {
             }
 
 .DepartmentsList {
-    border: #01a647 1px solid;
+    border: #ef8709 1px solid;
     text-align: center;
     margin-top: 20px;
 }
 
 .DepartmentsListHead {
-    border: #01a647 1px solid;
-    background-color: #99FFCC;
+    border: #ea6d00 1px solid;
+    background-color: #f98f0e;
 }
 
 a.DepartmentUnselected {
@@ -78,14 +78,14 @@ a.DepartmentSelected {
 }
 
 .CategoriesList {
-    border: #ea6d00 1px solid;
+    border: #321ace 1px solid;
     text-align: center;
     margin-top: 20px;
 }
 
 .CategoriesListHead {
-    border: #ea6d00 1px solid;
-    background-color: #f8c78c;
+    border: #3f26e0 1px solid;
+    background-color: #7c70cc;
 }
 
 a.CategoryUnselected {

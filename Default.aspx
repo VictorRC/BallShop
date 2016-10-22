@@ -8,12 +8,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div style="margin-left:25px">
         <h1>
-            <span class="CatalogTitle">Bienvenidos
-    a RS21 Nicaragua Online Shop
-            </span></h1>
+            <span class="CatalogTitle">Bienvenidos a RS21 Nicaragua Online Shop</span>
+        </h1>
         <h2>
-            <span class="CatalogDescription">Les ofrecemos una oferta especial para esta semana:</span></h2>
+            <span class="CatalogDescription">Les ofrecemos una oferta especial para esta semana:</span>
+        </h2>
         &nbsp;<uc1:ProductsList ID="ProductsList1" runat="server" />
     </div>
 </asp:Content>
-
