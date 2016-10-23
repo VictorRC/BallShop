@@ -9,7 +9,7 @@
 Text="Label"></asp:Label>
 </p>
 <p>
-<asp:Image ID="productImage" runat="server" />
+<asp:Image ID="productImage" runat="server" Height="200px" Width="200px" />
 </p>
 <p>
 <asp:Label ID="descriptionLabel" runat="server" Text="Label"></asp:Label>
