@@ -3,7 +3,7 @@
 
 <uc1:Pager ID="topPager" runat="server" Visible="False" />
 <asp:DataList ID="list" runat="server" OnSelectedIndexChanged="list_SelectedIndexChanged" RepeatColumns="2"
-    CssClass="ProductList">
+    CssClass="ProductList" OnItemDataBound="list_ItemDataBound">
     <ItemTemplate>
         <h3 class="ProductTitle">
             <a href="<%# Link.ToProduct(Eval("ProductID").ToString()) %>">
@@ -16,9 +16,13 @@
                 alt='<%# HttpUtility.HtmlEncode(Eval("Name").ToString())%>' />
         </a>
         <%# HttpUtility.HtmlEncode(Eval("Description").ToString()) %>
-        <p>
-            Price:      <%# Eval("Price", "{0:c}") %>
-        </p>
+       
+         <p class="DetailSection"> 
+          Price: <%# Eval("Price", "{0:c}") %> </p>
+        <asp:PlaceHolder ID="attrPlaceHolder" runat="server"></asp:PlaceHolder>
+
+
+
     </ItemTemplate>
 </asp:DataList>
 <uc1:Pager ID="bottomPager" runat="server" Visible="False" />

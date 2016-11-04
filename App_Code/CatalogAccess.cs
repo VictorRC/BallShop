@@ -33,6 +33,20 @@ public struct ProductDetails
 
 public class CatalogAccess
 {
+    public static DataTable GetProductAttributes(string productId)
+    {
+        DbCommand comm = GenericDataAccess.CreateCommand();
+  comm.CommandText = "CatalogGetProductAttributeValues";   
+  DbParameter param = comm.CreateParameter();
+  param.ParameterName = "@ProductID";
+        param.Value = productId;
+        param.DbType = DbType.Int32;
+        comm.Parameters.Add(param);
+      return GenericDataAccess.ExecuteSelectCommand(comm);
+    }
+
+
+
     public CatalogAccess()
     {
         //

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -65,4 +66,25 @@ public partial class UserControls_ProductsList : System.Web.UI.UserControl
     {
 
     }
-}
+
+  
+        protected void list_ItemDataBound(object sender, DataListItemEventArgs e)
+    {  DataRowView dataRow = (DataRowView) e.Item.DataItem;
+        string productId = dataRow["ProductID"].ToString();
+        DataTable attrTable = CatalogAccess.GetProductAttributes(productId);
+
+    PlaceHolder attrPlaceHolder = (PlaceHolder)e.Item.FindControl ("attrPlaceHolder");
+          string prevAttributeName = "";  string attributeName, attributeValue, attributeValueId;    
+          Label attributeNameLabel;  DropDownList attributeValuesDropDown = new DropDownList();
+       foreach (DataRow r in attrTable.Rows)  {   
+               attributeName = r["AttributeName"].ToString();
+            attributeValue = r["AttributeValue"].ToString();
+            attributeValueId = r["AttributeValueID"].ToString();  
+              if (attributeName != prevAttributeName)    {
+                prevAttributeName = attributeName;
+                attributeNameLabel = new Label();
+                attributeNameLabel.Text = attributeName + ": ";      attributeValuesDropDown = new DropDownList();
+                attrPlaceHolder.Controls.Add(attributeNameLabel);
+                attrPlaceHolder.Controls.Add(attributeValuesDropDown);    }
+        attributeValuesDropDown.Items.Add(new ListItem(attributeValue,  attributeValueId));  } }
+    }
