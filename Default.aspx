@@ -9,6 +9,7 @@
     <div style="margin-left:25px">
         <h1>
             <span class="CatalogTitle">Bienvenidos a RS21 Nicaragua Online Shop</span>
+            <asp:Button ID="Button1" runat="server" OnClick="cerrar_Click" Text="Button" />
         </h1>
         <h2>
             <span class="CatalogDescription">Les ofrecemos una oferta especial para esta semana:</span>
