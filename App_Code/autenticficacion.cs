@@ -18,6 +18,7 @@ public static class autenticficacion
         //consulta
         string sql = @"SELECT COUNT(*) FROM Usuarios WHERE USUARIO =@user AND contrase = @pass";
         //conexion
+		// para prueba user [Alex]y pass [123456hn]
         using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["BallShopConnection"].ToString()))
         {
             conn.Open(); //se abre la conexion

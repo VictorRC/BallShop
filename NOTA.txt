@@ -1,0 +1,18 @@
+CONEXION
+BallShopConnection
+Server=mssql4.gear.host; 
+Database=databaseballon; 
+User=databaseballon;
+Password=Home17.VePFB$"
+
+ACCESO
+user [Alex]
+pass [123456hn]
+
+FTP
+Hostname: ftp.gear.host
+Username: ballonshop\$ballonshop
+Password: aZ7tpS5hJbWbrYaE4n6dFT2tJXYQllahgreupdwCcFtmXLtiFnekkEtyF5sw
+
+WEB
+http://ballonshop.gear.host
